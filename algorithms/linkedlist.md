@@ -23,3 +23,10 @@ class ListNode:
 
 ```
 
+## When to use Linked List 
+- Frequent insertion / deletion in the middle: Arrays needs to shift
+- Unknown Size or Memory Constraints
+
+## When to not use Linked List
+- When need to randomly access item using indexes
+- When insertion happens at end. 
