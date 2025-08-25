@@ -31,10 +31,14 @@ class TreeNode:
     def add_child(self, child_node):
         self.children.append(child_node)
 
-    def print_tree(self, level=0):
-        print("  " * level + str(self.data))
-        for child in self.children:
-            child.print_tree(level + 1)
+        def print_clean_tree(self, prefix="", is_last =True):
+        branch= "\u2514\u2500" if is_last else "\u251c\u2500"
+        print(prefix+branch+self.data)
+        child_prefix =  prefix+ ("  " if is_last else "| ")
+
+        for i, node in enumerate(self.child):
+            is_last_c = (i==len(self.child)-1)
+            node.print_clean_tree( child_prefix,is_last_c )
 ```
 
 ## 5. Binary Tree Implementation
